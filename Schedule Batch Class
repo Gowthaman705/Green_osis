@@ -1,0 +1,69 @@
+Date d = System.today()- integer.valueof(system.label.days);
+            //d = d-2;
+Datetime dt = DateTime.parse(system.label.hours);//system.label.hours; addHours(integer.valueof(system.label.hours)).addMinutes(integer.valueof(system.label.minutes));            //dt = dt-2 ;
+            //dt.addHours();
+            String dayOfWeek;
+//Datetime dt = DateTime.parse('01/03/2021 09:00 AM');
+system.debug(dt+'-----------'+d+'***'+dt.format('EEEE'));
+
+CreateAndScheduleIPSProActiveBatch_New  batch = new CreateAndScheduleIPSProActiveBatch_New();      
+//batch.Query = 'Select f.Water_Source__c, f.Customer_Type1__c, f.Week_Counter__c,f.X1st_Visit_Date__c, f.Site_Special_Notes__c,f.Visit_Counter__c, f.Site_Contact__c, f.RecordTypeId, f.Provider_Group__c, f.PreferedTechnician__c,f.Alternate_Technician__c,f.Junior_Technician__c,f.Parking_Notes__c, f.OwnerId, f.Name, f.LastSuccessfulRun__c, f.LastModifiedDate, f.LastModifiedById, f.Id, f.Zip__c,f.Web_site__c,  f.Street__c, f.Stocking_Location__c,f.State__c, f.Site_Phone__c, f.Site_Fax__c, f.Email__c, f.Customer__c,f.Country__c, f.City__c,  f.Customer_Type__c, f.CreatedDate, f.CreatedById,f.Building_Access_Notes__c, (Select Id, OwnerId, IsDeleted, Name, CreatedDate, CreatedById, LastModifiedDate, LastModifiedById,SystemModstamp, LastActivityDate,  Account__c,  Route_Type__c, Weeks__c, Monday__c,Tuesday__c, Wednesday__c, Thursday__c, Friday__c From Routings__r) From Site__c f where ( Customer_Type__c = \'IPS\' or Customer_Type__c = \'FOF\')  and LastSuccessfulRun__c=2021-01-03  and id=\'a2e4N000001QQYvQAO\'';
+//batch.Query = 'Select f.Water_Source__c, f.Customer_Type1__c, f.Week_Counter__c,f.X1st_Visit_Date__c, f.Site_Special_Notes__c,f.Visit_Counter__c, f.Site_Contact__c, f.RecordTypeId, f.Provider_Group__c, f.PreferedTechnician__c,f.Alternate_Technician__c,f.Junior_Technician__c,f.Parking_Notes__c, f.OwnerId, f.Name, f.LastSuccessfulRun__c, f.LastModifiedDate, f.LastModifiedById, f.Id, f.Zip__c,f.Web_site__c,  f.Street__c, f.Stocking_Location__c,f.State__c, f.Site_Phone__c, f.Site_Fax__c, f.Email__c, f.Customer__c,f.Country__c, f.City__c,  f.Customer_Type__c, f.CreatedDate, f.CreatedById,f.Building_Access_Notes__c, (Select Id, OwnerId, IsDeleted, Name, CreatedDate, CreatedById, LastModifiedDate, LastModifiedById,SystemModstamp, LastActivityDate,  Account__c,  Route_Type__c, Weeks__c, Monday__c,Tuesday__c, Wednesday__c, Thursday__c, Friday__c From Routings__r) From Site__c f where ( Customer_Type__c = \'IPS\' or Customer_Type__c = \'FOF\')  and LastSuccessfulRun__c=2020-12-20  and id=\'a2e4N000001QQUeQAO\'';
+ // batch.Query = 'Select f.Water_Source__c, f.Customer_Type1__c, f.Week_Counter__c,f.X1st_Visit_Date__c, f.Site_Special_Notes__c,f.Visit_Counter__c, f.Site_Contact__c, f.RecordTypeId, f.Provider_Group__c, f.PreferedTechnician__c,f.Alternate_Technician__c,f.Junior_Technician__c,f.Parking_Notes__c, f.OwnerId, f.Name, f.LastSuccessfulRun__c, f.LastModifiedDate, f.LastModifiedById, f.Id, f.Zip__c,f.Web_site__c,  f.Street__c, f.Stocking_Location__c,f.State__c, f.Site_Phone__c, f.Site_Fax__c, f.Email__c, f.Customer__c,f.Country__c, f.City__c,  f.Customer_Type__c, f.CreatedDate, f.CreatedById,f.Building_Access_Notes__c, (Select Id, OwnerId, IsDeleted, Name, CreatedDate, CreatedById, LastModifiedDate, LastModifiedById,SystemModstamp, LastActivityDate,  Account__c,  Route_Type__c, Weeks__c, Monday__c,Tuesday__c, Wednesday__c, Thursday__c, Friday__c From Routings__r) From Site__c f where ( Customer_Type__c = \'IPS\' or Customer_Type__c = \'FOF\')  and LastSuccessfulRun__c=2020-12-20  ';
+//batch.Query = 'Select f.Water_Source__c, f.Customer_Type1__c, f.Week_Counter__c,f.X1st_Visit_Date__c, f.Site_Special_Notes__c,f.Visit_Counter__c, f.Site_Contact__c, f.RecordTypeId, f.Provider_Group__c, f.PreferedTechnician__c,f.Alternate_Technician__c,f.Junior_Technician__c,f.Parking_Notes__c, f.OwnerId, f.Name, f.LastSuccessfulRun__c, f.LastModifiedDate, f.LastModifiedById, f.Id, f.Zip__c,f.Web_site__c,  f.Street__c, f.Stocking_Location__c,f.State__c, f.Site_Phone__c, f.Site_Fax__c, f.Email__c, f.Customer__c,f.Country__c, f.City__c,  f.Customer_Type__c, f.CreatedDate, f.CreatedById,f.Building_Access_Notes__c, (Select Id, OwnerId, IsDeleted, Name, CreatedDate, CreatedById, LastModifiedDate, LastModifiedById,SystemModstamp, LastActivityDate,  Account__c,  Route_Type__c, Weeks__c, Monday__c,Tuesday__c, Wednesday__c, Thursday__c, Friday__c From Routings__r) From Site__c f where ( Customer_Type__c = \'IPS\' or Customer_Type__c = \'FOF\')  and LastSuccessfulRun__c=2021-01-03';
+  batch.Query = 'Select f.Water_Source__c, f.Customer_Type1__c, f.Week_Counter__c,f.X1st_Visit_Date__c, f.Site_Special_Notes__c,f.Visit_Counter__c, f.Site_Contact__c, f.RecordTypeId, f.Provider_Group__c, f.PreferedTechnician__c,f.Alternate_Technician__c,f.Junior_Technician__c,f.Parking_Notes__c, f.OwnerId, f.Name, f.LastSuccessfulRun__c, f.LastModifiedDate, f.LastModifiedById, f.Id, f.Zip__c,f.Web_site__c,  f.Street__c, f.Stocking_Location__c,f.State__c, f.Site_Phone__c, f.Site_Fax__c, f.Email__c, f.Customer__c,f.Country__c, f.City__c,  f.Customer_Type__c, f.CreatedDate, f.CreatedById,f.Building_Access_Notes__c, (Select Id, OwnerId, IsDeleted, Name, CreatedDate, CreatedById, LastModifiedDate, LastModifiedById,SystemModstamp, LastActivityDate,  Account__c,  Route_Type__c, Weeks__c, Monday__c,Tuesday__c, Wednesday__c, Thursday__c, Friday__c From Routings__r) From Site__c f where ( Customer_Type__c = \'IPS\' or Customer_Type__c = \'FOF\') ';
+   
+                  ID batchprocessid = Database.executeBatch(batch,50);
+system.debug('1111'+batchprocessid);
+
+/*
+list<Order_Line_Item__c> olilist = new list<Order_Line_Item__c>([select id, Need_to_Update__c from Order_Line_Item__c where createddate=this_month]);
+for(Order_Line_Item__c oli: olilist)
+oli.Need_to_Update__c=true;
+
+if(olilist.size()>0)
+update olilist;    
+system.debug('---------'+olilist.size());
+
+system.debug('-----'+[select COUNT() from work_order__c where Site_name__c='a2e4N000001QQXZ' ALL ROWS]);
+
+
+list<Attachment> blist = new list<attachment>();
+list<Attachment> attlist = new list<attachment>();
+
+map<id,Item__c> itemmap = new map<id,Item__c>();
+for(Item__c ite:[select id,updated__c, external_id__c, DocumentID__c from Item__c where updated__c = true limit 500]  )
+{
+     if(ite.external_id__c!=null && (ite.DocumentID__c == null || ite.DocumentID__c == ''))
+   			itemmap.put(ite.external_id__c,ite);
+}
+            system.debug('----11111------'+itemmap);
+
+for(Attachment a:[SELECT id,Name,ParentID,Body FROM Attachment])
+{
+    string str='';
+    str=string.valueof(a.ParentID);
+        if(str.startsWith('a0O'))
+            attlist.add(a);
+}   
+    
+Attachment b;
+system.debug('----11111------'+attlist);
+
+for(Attachment a:attlist)
+{
+           // system.debug('----11111------'+a.ParentID);
+    
+        if(itemmap.containskey(a.ParentID)){
+           // system.debug('----------'+str.startsWith('a0O'));
+    b = New Attachment(Name = a.Name, Body = a.Body, description='Planter');
+    b.parentID = itemmap.get(a.ParentID).id;
+    blist.add(b);
+        }
+}
+//if(blist.size()>0)
+   // insert blist;
+    
+system.debug('----2222------'+itemmap.size());
+system.debug('----1111------'+blist.size());
+system.debug('----1111------'+blist); */
